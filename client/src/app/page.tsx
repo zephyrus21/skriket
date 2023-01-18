@@ -10,23 +10,7 @@ const Home: React.FC<HomeProps> = ({}) => {
   const [color, setColor] = useState<string>("#000");
   const { canvasRef, onMouseDown, clear } = useDraw(drawLine);
 
-  function drawLine({ ctx, currentPoint, prevPoint }: Draw) {
-    const { x: currentX, y: currentY } = currentPoint;
-    const lineWidth = 5;
-
-    let startPoint = prevPoint ?? currentPoint;
-    ctx.beginPath();
-    ctx.lineWidth = lineWidth;
-    ctx.strokeStyle = color;
-    ctx.moveTo(startPoint.x, startPoint.y);
-    ctx.lineTo(currentX, currentY);
-    ctx.stroke();
-
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.arc(startPoint.x, startPoint.y, 2, 0, Math.PI * 2);
-    ctx.fill();
-  }
+  function drawLine({ ctx, currentPoint, prevPoint }: Draw) {}
 
   return (
     <div className='h-screen w-screen flex justify-center items-center gap-8'>
