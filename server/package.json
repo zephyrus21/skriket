@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.ts",
-    "build": "tsc index.ts --outDir build",
-    "start": "node build/index.js"
+    "build": "tsc index.ts --outDir public",
+    "start": "node public/index.js"
   },
   "dependencies": {
     "express": "^4.18.2",
