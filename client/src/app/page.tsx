@@ -6,7 +6,8 @@ import { useDraw } from "@/hooks/useDraw";
 import { io } from "socket.io-client";
 import { drawLine } from "@/utils/drawLine";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://skriket-server.vercel.app/");
+// const socket = io("http://localhost:3001");
 
 interface HomeProps {}
 
@@ -62,6 +63,7 @@ const Home: React.FC<HomeProps> = ({}) => {
     socket.emit("draw-line", { prevPoint, currentPoint, color });
     drawLine({ prevPoint, currentPoint, ctx, color });
   }
+
   return (
     <div className='h-screen w-screen flex justify-center items-center gap-8'>
       <div className='flex flex-col gap-4'>
