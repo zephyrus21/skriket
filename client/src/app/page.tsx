@@ -67,7 +67,7 @@ const Home: React.FC<HomeProps> = ({}) => {
       <div className='flex flex-col gap-4'>
         <CirclePicker color={color} onChange={(e) => setColor(e.hex)} />
         <button
-          onClick={clear}
+          onClick={() => socket.emit("clear")}
           className='p-4 bg-slate-500 text-white rounded-md'>
           Clear
         </button>
