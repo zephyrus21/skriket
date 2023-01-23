@@ -6,8 +6,8 @@ import { useDraw } from "@/hooks/useDraw";
 import { io } from "socket.io-client";
 import { drawLine } from "@/utils/drawLine";
 
-const socket = io("https://skriket-server.vercel.app/");
-// const socket = io("http://localhost:3001");
+// const socket = io("https://skriket-server.vercel.app/");
+const socket = io("http://localhost:3001");
 
 interface HomeProps {}
 
